@@ -1,0 +1,12 @@
+.dtable {
+    display:table;
+}
+
+.drow{
+    display: table-row;
+}
+
+.dcell{
+    display: table-cell;
+    padding: 10px;
+}
