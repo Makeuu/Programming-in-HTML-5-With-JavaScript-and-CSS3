@@ -1,14 +1,40 @@
 @import url("/styles/default.css");
-
 .dtable {
-    display:table;
+    display: table;
 }
 
-.drow{
+.drow {
     display: table-row;
 }
 
-.dcell{
+.dcell {
     display: table-cell;
     padding: 10px;
+}
+
+/*Propriétés Animation sur les images*/
+
+.dcell>img:hover {
+    animation: scaleImage2 0.5s;
+}
+
+@keyframes scaleImage2 {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(90deg) scale(1.3);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/*Propriétés sur l'image - Centrer*/
+
+#imgBonds {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    display: block;
 }
