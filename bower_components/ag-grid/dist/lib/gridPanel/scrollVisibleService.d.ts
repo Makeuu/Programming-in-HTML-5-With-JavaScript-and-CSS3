@@ -1,0 +1,25 @@
+export interface SetScrollsVisibleParams {
+    vBody: boolean;
+    hBody: boolean;
+    vPinnedLeft: boolean;
+    vPinnedRight: boolean;
+}
+export declare class ScrollVisibleService {
+    private eventService;
+    private columnController;
+    private columnApi;
+    private gridApi;
+    private vBody;
+    private hBody;
+    private vPinnedLeft;
+    private vPinnedRight;
+    setScrollsVisible(params: SetScrollsVisibleParams): void;
+    isVBodyShowing(): boolean;
+    isHBodyShowing(): boolean;
+    isVPinnedLeftShowing(): boolean;
+    isVPinnedRightShowing(): boolean;
+    getPinnedLeftWidth(): number;
+    getPinnedLeftWithScrollWidth(): number;
+    getPinnedRightWidth(): number;
+    getPinnedRightWithScrollWidth(): number;
+}

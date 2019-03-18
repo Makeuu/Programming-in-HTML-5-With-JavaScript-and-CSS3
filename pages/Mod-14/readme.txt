@@ -1,0 +1,1 @@
+﻿http://stackoverflow.com/questions/13007582/html5-drag-and-copy

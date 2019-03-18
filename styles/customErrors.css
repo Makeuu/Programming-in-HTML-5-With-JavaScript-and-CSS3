@@ -1,0 +1,11 @@
+﻿input.error {
+    background-color: #ff6a00;
+    font-family:Verdana;
+    font-size:14px
+}
+label.error {
+    padding:2px;
+    background-color:aliceblue;
+    font-family:Arial;
+    font-size:14px
+}

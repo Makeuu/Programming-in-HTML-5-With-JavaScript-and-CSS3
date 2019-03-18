@@ -1,0 +1,20 @@
+﻿body {
+    margin-top:100px;
+    margin-left: 10px;
+    background-color:lightgray;
+    /* font-family:Verdana;
+    font-size:14px */
+}
+
+article {
+    font-family: Verdana;
+    font-size: 16px;
+   
+}
+
+
+
+nav {
+     background-color: burlywood;
+     padding: 3px;
+}

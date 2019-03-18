@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/default.css" rel="stylesheet" />
+    <link href="/Styles/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script src="07.2-HtmlPageNorthwind.js"></script>
+    <script>
+        //Action 1 : ? DOM
+        $(document).ready(function () {
+           
+            //Action 2 et 3 : Abonnement
+            // et Appel au service Northwind.svc (Customers)
+           
+            //Action 4 : Abonnement à la sélection d'un client (ID)
+           
+        })
+    </script>
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <div class="container">
+        <div class="row">
+            <article class="col-sm-4">
+                Appel à un service Rest/oDATA [Northwind.svc] Ajax/jQuery
+                <p><a href="https://services.odata.org/V3/Northwind/Northwind.svc/Customers('ANTON')?$format=json&amp;$select=CustomerID,CompanyName,City,Country" target="_blank">Northwind</a></p>
+            </article>
+
+            <button class="col-sm-4" id="btnCallAjax"
+                    style="width: 200px; height: 50px;"
+                    value="Call Ajax">
+                Call Ajax Northwind
+            </button>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-4"  id="divClient">
+                <charset id="textIntro">Click the button for the customer list </charset>
+                <select class="dropdown-menu-left" id="CustomerList"></select>
+            </div>
+
+            <div class="col-sm-8" id="divOrder">
+                <h4 style="background-color:orange" id="customer"></h4>
+                <ul class="list-group-item-text" id="OrderList"></ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
