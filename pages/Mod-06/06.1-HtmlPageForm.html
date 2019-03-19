@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/default.css" rel="stylesheet" />
+    <style>
+        label {
+            text-align: right;
+            width: 100px;
+        }
+        div {
+            padding: 2px;
+        }
+    </style>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#frm').submit(function (evt) {
+                var _this = this;
+                var frm = $('#frm');
+                var value = frm.serialize();
+                var values = frm.serializeArray();
+                var jsonTests = JSON.stringify(values);
+                evt.preventDefault();
+               //return false;
+            });
+            // $('#btnOrder').click(function (e) {
+            //     alert("Submit via code js");
+            //     var form = $("#frm");
+            //     var values = form.serialize();
+            //     var values2 = form.serializeArray();
+            //     $("#frm").trigger("submit");
+            //     //e.preventDefault();
+            // });
+
+        })
+    </script>
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <h2>Envois d'un formulaire vers une page HTML 1</h2>
+    <form id="frm" target="_self"
+          action="HtmlPage1.html">
+        <div>
+            <label>Nom</label>
+            <input name="lastName" type="text" />
+        </div>
+        <div>
+            <label>Prénom</label>
+            <input name="firstName" type="text" />
+        </div>
+        <div>
+            <label>Genre</label>
+            <input name="genre" value="Homme"
+                   type="radio" />Homme
+            <input name="genre" value="Femme"
+                   type="radio" />Femme
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" />
+        </div>
+        <div>
+            <label>Mot de Passe</label>
+            <input type="password" name="pwd">
+        </div>
+        <div>
+            <label>Choix</label>
+
+            <select size="4">
+                <option value="option1">option 1</option>
+                <option value="option2">option 2</option>
+            </select>
+        </div>
+        <div>
+            <label>News</label>
+            <input type="checkbox" id="checkbox1" />News Letter Informaticien
+            <!--<br />
+            <input type="checkbox" id="checkbox2" />Accepté
+            <br />-->
+        </div>
+        <div>
+            <label>Message</label>
+
+            <textarea rows="5"></textarea>
+
+        </div>
+
+
+        <div>
+            <label>Envois</label>
+            <input type="submit" value="Envoi Input" />
+            <button type="submit">
+
+                <img src="../../Images/info.gif" />
+                Envoi BTN
+            </button>
+
+        </div>
+    </form>
+    <br />
+    <label>Envois hors Formulaire</label>
+    <button id="btnOrder" type="submit">Envoi BTN Out of Form</button>
+</body>
+</html>
