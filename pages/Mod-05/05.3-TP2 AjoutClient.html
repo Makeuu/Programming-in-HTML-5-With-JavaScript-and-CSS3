@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Template Page 4</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/bootstrap-theme.css" rel="stylesheet" />
+    <!-- <link href="/Styles/default.css" rel="stylesheet" /> -->
+    <link href="/Styles/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+
+    <!-- <script>
+        // $(document).ready(function () {
+        //Action sur le DOM
+        var message = "Hello HTML 5"
+        function SayHelloJS() {
+            // alert("Hello API HTML 5");
+            var el = document.getElementById('divMessage');
+            if (el !== null) {
+                el.innerHTML = message;
+            }
+        }
+            // window.onload = SayHelloJS();
+        // })
+
+    </script> -->
+
+</head>
+
+<body>
+    <header id="header" class="container"></header>
+
+    <article>Création d'un objet JavaScript via une fonction Constructeur </article>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="2"><input type="submit" id="btn" value="Bind Customer" /></td>
+            </tr>
+            <tr>
+                <td><label for="custId">ID Client</label></td>
+                <td><input disabled="" type="text" id="custId" style="padding: 5px;" /></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top"><label for="custName">Client</label></td>
+                <td style="vertical-align:top">
+                    <input placeholder="tout en attaché !!" type="text" id="custName"
+                        style="padding: 5px;vertical-align:text-top" value="Client" />
+                </td>
+                <td>
+                    <div>
+                        <p><span id="nbCust"></span></p>
+                        <ul class="list-group" id="listCust" />
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script src="/pages/Mod-05/05.3-TP2 AjoutClient.js"></script>
+    <script>
+        function PassCustomer(){
+            // var companyName = document.getElementById('custName').value;
+            var companyName = $('#custName').val();
+            var position = companyName.indexOf(" ");
+            if (position > 0) {
+                companyName = companyName.substr(0, position);
+                ApplyBinding(companyName);
+            }
+            else {
+                ApplyBinding(companyName);
+            }
+        }
+        window.onload = function(){
+            $('#btn').click(function(e){
+                PassCustomer();
+                e.preventDefault()
+            });
+        }
+    </script>
+
+</body>
+
+</html>
