@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="appNorthwind">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/default.css" rel="stylesheet" />
+    <link href="/Styles/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script src="07.4-HtmlPageAjaxAngularJS.js"></script>
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <article>Injection de Fragment HTML via Ajax/AngularJS </article>
+    <div>
+
+        <img src="/Images/angular.PNG" />
+    </div>
+    <div style="width: 500px" ng-controller="ctlNorthwind as ctl" ng-init="ctl.initEvent()">
+        <ul ng-repeat="customer in ctl.Customers">
+            <li><span>{{customer.customerID}}</span><span>{{customer.companyName}}</span></li>
+        </ul>
+        <!--<table ng-controller="ctlNorthwind as ctl" ng-init="ctl.initEvent()"
+           class="table table-bordered table-condensed table-striped"
+           style="width: calc(100% - 60px);">
+        <thead>
+            <tr>
+                <th>CompanyName</th>
+                <th>CustomerID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="customer in ctl.Customers">
+                <td><span>{{customer.companyName}}</span></td>
+                <td><span>{{customer.customerID}}</span></td>
+            </tr>
+
+        </tbody>
+    </table>-->
+    </div>
+   
+</body>
+</html>
