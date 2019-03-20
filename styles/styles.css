@@ -18,6 +18,23 @@
     animation: scaleImage2 0.5s;
 }
 
+.error{
+    animation: erreurFormulaire 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes erreurFormulaire{
+    0%{
+        color: blue;
+    }
+    50%{
+        color:red;
+    }
+    100%{
+        color: blue;
+    }
+}
+
 @keyframes scaleImage2 {
     0% {
         transform: rotate(0deg) scale(1);
