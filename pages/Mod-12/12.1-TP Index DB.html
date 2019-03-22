@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Template Page 4</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/Styles/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="12.1-TP Index DB.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btnOpenDB').click(function(){
+                console.log("Creation de la DB");
+                Create_IndexedDB();
+            })
+            $('#btnAddCourse').click(function(){
+                console.log("Ajout d'un stage");
+                AddStage_IndexedDB();
+            })
+        })
+    </script>
+
+</head>
+
+
+
+<body>
+    <header id="header" class="container"></header>
+
+    <div class="container">
+        <article>Gestion d'un indexDB </article>
+        <button type="button" class="btn btn-warning" id="btnOpenDB">Creer Index DB</button>
+        
+        <button type="button" class="btn btn-danger" id="btnAddCourse">Ajouter une course</button>
+
+        
+        <div class="panel panel-default">
+            <div class="panel-body" id="msg">
+               
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+
+</html>

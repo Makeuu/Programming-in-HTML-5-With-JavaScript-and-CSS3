@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/default.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script src="08-HtmlPagePromise.js"></script>
+    <script>
+        function TestAsynch() {
+            var el = document.getElementById('Text2')
+            var num = el.value;
+            num++;
+            el.value = num;
+        }
+        
+    </script>
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <h2>Objet Promesse (Promise)</h2>
+
+    <div>4 opérations sont en cours: </div>
+    <textarea rows="7" style="width:200px">MethodAsync('Start')
+    .then(OpenDBConnection)
+    .then(findUser)
+    .then(validateUser)
+    .then(doStuff)
+    .then(function () { console.log('Fin opération'); })</textarea>
+    <div>Ces opérations sont dites asynchrones mais sont exécutées via le thread principal</div>
+    <div>
+        Javascript Opération (mais bloquée si opération async dure)<br />
+        <input id="Button2" type="button" onclick="TestAsynch();" value="button" />
+        <input id="Text2" type="text" value="1" /><br />
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Styles/default.css" rel="stylesheet" />
+    <link href="/Styles/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Navigation/JS-Navigation.js"></script>
+    <script src="09.2-JavaScriptWWorker.js"></script>
+    <script>
+        $(document).ready(function () {
+            var btn = document.getElementById("btnTerminate");
+            var anim = document.getElementById("anim");
+            btn.disabled = true;
+            anim.hidden = true;
+            var msg = document.getElementById("message");
+            //
+            $('#btn').click(function () {
+                btn.disabled = false;
+                anim.hidden = false;
+                var num = $('#inNum').val();
+                var init = new w(num);
+                msg.innerText = "";
+                //
+                $(btn).click(function () {                  
+                    init.TerminateWorker();
+                    anim.hidden = true;
+                })
+            })
+
+            //
+            $('#btnCompteur').click(function () {
+                var el = $('#inCompteur');
+                var num = el.val();
+                num++;
+                el.val(num);
+            })
+        })
+        //
+
+    </script>
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <input  id="inNum" type="text" value="40" />
+                <button  id="btn">Web Worker</button>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                Compteur
+                <button id="btnCompteur">test Async</button>
+                <input type="text" id="inCompteur" />
+            </div>         
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+              
+                <button id="btnTerminate">Stop Web Worker</button>
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+
+                <img id="anim" width="150" height="150" src="../../Images/loading_apple.gif" />
+               
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="font-size:24px; font-weight:bold">
+                <div id="message"></div>
+            </div>
+            <div class="col-sm-6" style="font-size:24px; font-weight:bold">
+                <div id="demo"></div>
+            </div>
+        </div>
+        
+        <div>
+           
+        </div>
+    </div>
+</body>
+</html>
